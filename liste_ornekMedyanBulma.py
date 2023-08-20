@@ -1,17 +1,16 @@
-#MEDYAN
 L=[]
-elemanSayisi=int(input("liste kac elemanli olsun:"))
-
-if elemanSayisi%2==1:
-    for i in range(0,elemanSayisi): # tek elemanlı liste olusturma
-        sayi=int(input("sayi gir:"))
-        L.append(sayi)
-    L.sort()
-    print(L[int((len(L)-1)/2)])
-else:
-    for i in range(0,elemanSayisi): # cift elemanlı liste olusturma
-        sayi=int(input("sayi gir:"))
-        L.append(sayi)
-    L.sort()
-    print((L[int(len(L)/2-1)]+L[int(len(L)/2)])/2)
-
+while True:
+    TC=int(input("TC GİR..:"))
+    if TC in L:
+        i=L.index(TC)
+        print("Muayene sirasi..:",i+1)
+    elif TC==0:
+        print(L[0])
+        L.pop(0)
+        print(L[0],"TC numarali hasta iceri giriniz")
+    else:
+        L.append(TC)
+        print(TC,"TC numarali hasta siraya alindi")
+        
+        
+        
